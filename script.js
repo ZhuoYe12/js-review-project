@@ -1,4 +1,4 @@
-// == Todo CRUD Management
+// === Todo CRUD Management ====
 
 // Array to store todos
 let todos = [];
@@ -11,17 +11,20 @@ const todoList = document.getElementById('todo-list');
 // Function to render todos
 function renderTodos ( ) {
     todoList.innerHTML = ''; // Clear the list
-    todos. forEach((todo, index) => {
+    todos.forEach((todo, index) => {
         const li = document.createElement('li');
-        li. className = 'todo-item';
-        li. innerHTML = '<span>${todo}</span><><button onclick="editTodo(${index})">Edit</button><button onclick="deleteTodo(${index})">Delete</button></>';
+        li.className = 'todo-item';
+        li.innerHTML = `
+            <span>${todo}</span><>
+            <button onclick="editTodo(${index})">Edit</button>
+            <button onclick="deleteTodo(${index})">Delete</button></>
+        `;
         todoList.appendChild(li);
     });
 }
 
-
 // Function to add a new todo
-function addTodo (event) {
+function addTodo(event) {
     event.preventDefault(); // Prevent form submission 
     const newTodo = todoInput.value.trim();
     if (newTodo) {
@@ -35,7 +38,7 @@ function addTodo (event) {
     function editTodo (index) {
         const updatedTodo = prompt ('Edit your todo:', todos [index]); 
         if (updatedTodo !== null) {
-            todos [index] = updatedTodo.trim();
+            todos[index] = updatedTodo.trim();
             renderTodos();
     }
 }

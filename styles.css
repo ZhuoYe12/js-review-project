@@ -61,9 +61,14 @@ button:hover {
     border-bottom: 1px solid #ccc;
 }
     
-.todo-item last-child {
+.todo-item:last-child {
     border-bottom: none;
 }  
+
+.todo-item span{
+    flex: 1;
+    margin-right: 10px;
+}
 
 .todo-item button {
     background-color: #dc3545;
