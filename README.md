@@ -1,2 +1,0 @@
-# js-review-project
-Review
