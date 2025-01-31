@@ -13,7 +13,7 @@ body {
     background-color:#fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px Orgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
 }  
     
@@ -37,7 +37,7 @@ h1 {
     
 button {
     padding: 10px 15px;
-    background-color:#28a745;
+    background-color:#28a745;                                                                   
     color: #fff;
     border: none;
     border-radius: 4px;
